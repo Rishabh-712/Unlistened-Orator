@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlistened Orator|Orating the World</title>
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script data-ad-client="ca-pub-6223019258181762" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="google-site-verification" content="adCwMoqtFPlsnMvfldZ1SkUrPjz0h_9ZblwMUpD93AI" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="hamburger">
+        <div class="ham1"></div>
+        <div class="ham2"></div>
+        <div class="ham3"></div>
+
+      </div>
+      
+      <div class="logo">
+        <a href="index.html">Unlistened Orator</a>
+
+      </div>
+
+      
+      <div class="nav-buttons">
+        <a href="index.html" id="active">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="#about">About</a>
+        
+
+      </div>
+
+     
+
+    </nav>
+  </header>
+    <section class="hero">
+      <div class="hero-tag trans"> <h1>Orator</h1></div>
+      <div class="hero-des">
+        Unlistened Orator is a social media platform to guide motivate and encourage those who are struggling in search of success. 
+      </div>
+      <div class="hero-btn ">
+        <a href="https://youtube.com/channel/UCjKu7UrupvX2meCmuPMLHsA" class="btn">Join</a>
+        <a href="https://instagram.com/abd_ul_talks?utm_medium=copy_link" class="tbtn">Follow Me</a>
+      </div>
+    </section>
+    <section class="about-me">
+      
+      <div class="ab-des">
+        <h1>Hey,I am <span>Abdurrahman Khan</span></h1>
+        <p>(Founder of Unlistened Orator)</p><br>
+        <p>Student Coach | Career Consultant | Motivational Speaker</p>
+      </div>
+    </section>
+    <section class="work" id="about">
+      <h1>So,<span style="color: crimson;">What We DO</span>?</h1>
+      <div class="cards">
+        <div class="card">
+
+          <div class="wk-image"><img src="./cd1.jpg" alt=""></div>
+          <h1>Student's Coach</h1>
+          <p>A vision to make learning an easy deed for those students who are struggling to get satisfied with the quality of education in India . Unlistened Orator is here to help them in improving their learning capabilities.</p>
+          <br>
+          <a href="posts.html">Learn more></a>
+        </div>
+        <div class="card">
+          <div class="wk-image"><img src="./cd2.jpg" alt=""></div>
+          <h1>Career Consultant</h1>
+          <p>The  path to be followed after a certain point of time is a very crucial decision in the life of a student . It creates a great impact on the whole lifestyle of an individual . Unlistened Orator is here to guide you in the right direction. It will help you to find  your hidden potential , the gods gift in you , your signature strength and your unique personality .</p>
+          <br>
+          <a href="posts.html">Learn more></a>
+        </div>
+        <div class="card">
+          <div class="wk-image"><img src="./cd3.jpg" alt=""></div>
+          <h1>Motivational Speaker</h1>
+          <p>Motivation plays a crucial role in driving you towards your goals . Motivation is needed at every next step of life . Life is full of ups and downs.  To never let you out of the track , Unlistened Orator is here to motivate you at every single step of your life.</p>
+          <br>
+          <a href="posts.html">Learn more></a>
+        </div>
+      </div>
+    </section>
+   <footer>
+    <div><h1>Orator</h1></div>
+    <div>All copyrights &copy; reserved <span id="year"></span></div>
+    <div class="social">
+      <a href="https://youtube.com/channel/UCjKu7UrupvX2meCmuPMLHsA"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/abd_ul_talks?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
+      
+    </div>
+   </footer>
+
+<script>
+  const ham =document.querySelector(".hamburger");
+  const nav =document.querySelector(".nav-buttons");
+  window.addEventListener("scroll",trans);
+  document.getElementById("year").innerHTML=new Date().getFullYear(); 
+    
+    ham.addEventListener('click',appear)
+      function appear() {
+        nav.classList.toggle("aprnav")
+        
+        ham.classList.toggle('aprham')
+        document.body.classList.toggle('scroll')
+    }
+    
+    setInterval(() => {
+      document.querySelector(".trans").classList.add("appear")
+     
+    },900);
+    function trans() {
+      if(this.scrollY>this.innerHeight/2){
+        document.querySelector(".ab-des").classList.add("appear")
+      }
+    }
+
+</script>
+</body>
+</html>

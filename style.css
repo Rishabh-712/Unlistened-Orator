@@ -1,0 +1,387 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* overflow-y: hidden; */
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.scroll{
+    
+    position: fixed;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: cornflowercrimson; */
+}
+.nav-buttons{
+    margin-right: 10px;
+}
+.nav-buttons a{
+    padding: 0.5rem 1.5rem;
+    transition: border 0.3s ;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    /* font-weight: bold; */
+    border-color: crimson;
+    border-bottom: 2px solid rgba(220, 20, 60, 0);
+
+}
+.nav-buttons a:hover,#active{
+  border-bottom: 2px solid crimson;
+    
+}
+
+.logo a{
+    text-decoration: none !important;
+    color:white;
+    /* font-weight: bolder; */
+    margin: 0px 1rem;
+    font-size: 1.7rem;
+
+    font-family: 'Lobster Two', cursive;
+}
+.hamburger{
+    
+    cursor: pointer;
+    display: none;
+    transition: transform 3s ease;
+    margin: 0px 4px;
+}
+.ham1,.ham2,.ham3{
+    width: 1.9rem;
+    height: 0.19rem;
+    background-color: crimson;
+    margin: 3px 0px;
+    transition: all 0.25s ease-in-out !important;
+}
+.hero::before{
+    content: '';
+    width: 100%;
+    height:93vh;
+    position:absolute;
+    z-index: -2;
+    background: url(./bg1.jpg) center no-repeat ;
+    /* transform: translateY(-10vh); */
+}
+.hero{
+    height:60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+   
+
+    
+}
+.hero-tag{
+    color: white;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.hero-des{
+    color: white;
+    font-size: 1.06rem;
+    max-width: 523px;
+    margin-left: 2rem;
+    margin-bottom: 2.2rem;
+    line-height: 1.5rem;
+}
+.hero-btn{
+    margin-left: 2rem;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 2.9rem;
+    
+    font-size: 1.5rem;
+    height: 1rem;
+    width: 4rem;
+    background: crimson;
+}
+.tbtn{
+    text-decoration: none;
+    color: white;
+    padding: 0.45rem 1rem;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    height: 1rem;
+    width: 4rem;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.tbtn:hover{
+    background: crimson;
+}
+.about-me{
+   height: 70vh;
+   display: flex;
+   margin-top:3rem ;
+   justify-content: center;
+   align-items: center;
+}
+.img img{
+    /* border: 2px solid crimson; */
+    width: 300px;
+    height: 302px;
+    object-fit: cover;
+    transform: translateY(10px);
+}
+.about-me h1{
+    margin-left: 3rem;
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    
+}
+.ab-des{
+    transform: translateY(5vh);
+    opacity: 0;
+    transition:all 0.5s ;
+}
+.about-me h1 span{
+    color: crimson;
+}
+.about-me p {
+    margin-left: 3rem;
+
+    font-size: 1.1rem;
+    max-width: 523px;
+    color:rgb(31, 31, 31);
+}
+.work{
+    height: 107vh;
+    
+
+}
+.work>h1{
+    margin: 1rem 0px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+.cards{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.card{
+    /* border: 2px solid red; */
+    height: 32rem;
+    width: 22rem;
+    font-family: sans-serif;
+    box-shadow: 3px 3px 20px rgb(0 0 0 / 50%);
+    transition: transform 1s ;
+    
+
+}
+.card:hover{
+transform: translateY(-5%);
+}
+.card h1,.card a {
+    color: crimson;
+    margin: 0.5rem 1rem;
+   
+}
+.card h1{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.card p{
+    font-size: 0.9rem;
+    margin: 0.5rem 1rem;
+}
+
+
+.wk-image img,.wk-image{
+    height: 17rem;
+    width: 22rem;
+    object-fit: cover;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+    background: crimson;
+    color: rgb(231, 231, 231);
+}
+footer h1{
+    margin: 1rem 1rem;
+    font-family: 'Lobster Two', cursive;
+    font-size: 2.5rem;
+}
+footer p{
+   
+    /* width:50vw; */
+    text-align: center;
+}
+
+.social i{
+font-size: 2.5rem;
+padding: 0px 1rem;
+color: white;
+}
+.trans{
+    transform: translateY(5vh);
+    opacity: 0;
+    transition:all 0.5s;
+}
+.appear{
+    transform: translateX(0px);
+    transform: translatey(0px);
+    opacity: 1;
+}
+/* ////////////////////////////////////////////////////////// */
+@media screen and (max-width:1066px){
+.card{
+    width: 17rem;
+    height: 34rem;
+}
+.wk-image img,.wk-image{
+    /* border: 2px solid red; */
+    width: 17rem;
+    height: 17rem;
+}
+}
+@media screen and (max-width:859px){
+    .cards{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 200vh;
+        
+    }
+    .work{
+        height: 222vh;
+    }
+    .card{
+        width: 80vw;
+        height:62vh;
+    }
+    .card:hover{
+        transform: unset;
+    }
+    .wk-image img,.wk-image{
+        /* border: 2px solid red; */
+        width: 80vw;
+        height:32vh ;
+    }
+    .about-me h1{
+        font-size:2.5rem ;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:529px){
+    html{
+        font-size: 90%;
+    }
+   .hamburger{
+       display:inline;
+       transition: all 3s ease !important;
+       
+   }
+    nav{
+    
+    justify-content:unset;
+   
+    }
+   
+   
+
+   .nav-buttons{
+       position: absolute;
+       
+       top: 10vh;
+       left: 0px;
+       background-color:crimson;
+       /* filter: blur(10px); */
+       transition: transform 0.3s ease;
+       z-index: 200;
+       
+       transform: translateX(-100%);
+       height: 90vh;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        
+        
+       
+   }
+  .nav-buttons a{
+      margin: 8vh 0px;
+      /* z-index: 200; */
+      color: white;
+      font-size: 1.2rem;
+  }
+  .hero-tag{
+    
+    font-size: 2rem;   
+}
+   .img img{
+       width:90vw;
+       /* height: 170px; */
+   }
+   .about-me{
+       flex-direction: column;
+       height: 88vh;
+   }
+   .work{
+    height: 250vh;
+}
+   .card{
+       height:66vh ;
+   }
+   .cards{
+       height:230vh ;
+   }
+   footer h1{
+    font-size: 2rem;
+   }
+   .social a i{
+       font-size: 2rem;
+       padding: 0px 0.5rem;
+   }
+   .about-me h1{
+       font-size:2.5rem ;
+   }
+}
+/* @media screen and (max-width:350px){
+    .card{
+        height:59vh ;
+    }
+} */
+   
+.aprnav{
+    display:flex;
+   
+    opacity: 1;
+    transform: translateX(0px) ;
+   
+   
+}
+.aprham .ham1{
+    transform: rotate(-45deg) translate(-5px,6px) !important;
+}
+.aprham .ham2{
+    opacity: 0;
+}
+.aprham .ham3{
+    transform: rotate(45deg) translate(-2px,-3px) !important;
+}
